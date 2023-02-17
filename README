@@ -1,1 +1,17 @@
-WrodPressプラグイン StaticPage S3 sync and CloudFront cache clearです。
+WrodPressプラグイン StaticPage S3 sync and CloudFront cache clear
+
+== Description ==
+
+WordPressでプラグインです。
+WordPressで生成した静的ファイルをS3＋CloudFrontで配信しているケースで利用することを想定したプラグインです。
+機能は以下の2つです。
+* AWS S3へ同期する
+* AWS CloudFrontのキャッシュをクリアする
+
+記事を作成し静的ファイルの生成まで終わったら、このプラグインを使用して簡単に公開することができます。
+
+このプラグインを使用するにはWordPressが動作しているサーバにAWS CLIがインストールされている必要があります。
+
+設定はたったの2ステップで簡単。
+* IAM を構成する
+* このプラグインの 「CloudFront ディストリビューション ID」「S3バケット名」「WordPressが動いているサーバの静的ファイルが格納されているディレクトリパス」 を設定します
