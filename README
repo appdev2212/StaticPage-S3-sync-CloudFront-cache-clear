@@ -15,3 +15,19 @@ WordPressで生成した静的ファイルをS3＋CloudFrontで配信してい�
 設定はたったの2ステップで簡単。
 * IAM を構成する
 * このプラグインの 「CloudFront ディストリビューション ID」「S3バケット名」「WordPressが動いているサーバの静的ファイルが格納されているディレクトリパス」 を設定します
+IAMポリシーの設定例
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "cloudfront:CreateInvalidation",
+                "s3:ListBucket",
+                "s3:PutObject"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
