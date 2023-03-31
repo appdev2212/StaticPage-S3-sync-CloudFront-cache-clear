@@ -3,7 +3,7 @@ class S3SyncCloudFrontCacheClearExe
 {
 
 
-    function exe($distribute, $dir, $bucket)
+    public static function exe($distribute, $dir, $bucket)
     {
         if (is_admin() && is_user_logged_in()) {
 
